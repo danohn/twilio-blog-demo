@@ -3,6 +3,10 @@ services:
   flask:
     build: ./flask
     container_name: flask
+    environment:
+      - SALES_NUMBER=${SALES_NUMBER}
+      - SUPPORT_NUMBER=${SUPPORT_NUMBER}
+      - FROM_NUMBER=${FROM_NUMBER}
     restart: always
     expose:
       - 8080
